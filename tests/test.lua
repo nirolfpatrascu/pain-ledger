@@ -62,7 +62,7 @@ function time() return now end
 function GetServerTime() return now+7 end
 function GetRealmName() return "Realm" end
 function RequestTimePlayed() PLAYED_REQUESTED=(PLAYED_REQUESTED or 0)+1 end
-C_AddOns={GetAddOnMetadata=function(_,k) if k=="Version" then return "0.14.2" end end}
+C_AddOns={GetAddOnMetadata=function(_,k) if k=="Version" then return "0.14.3" end end}
 function UnitRace() return "Gnome","Gnome" end
 function UnitFactionGroup() return "Alliance","Alliance" end
 RANDOM_ROLL_RESULT="%s rolls %d (%d-%d)"
@@ -350,7 +350,7 @@ do
   db.log[#db.log].h=sha(PainLedger.EntryString(db.log[#db.log],db.log[#db.log-1].h)); db.chain.head=db.log[#db.log].h
   eq(PainLedger.ChainVerify(3),true,"chain repaired for the rest of the tests")
   eq(LINES["head"]:find("Chain #")~=nil,true,"window shows the chain head")
-  eq(LINES["title"]:find("v0.14.2")~=nil,true,"window title shows the version")
+  eq(LINES["title"]:find("v0.14.3")~=nil,true,"window title shows the version")
   local hasVersion=false; for _,e in ipairs(db.log) do if e.kind=="VERSION" then hasVersion=true end end
   eq(hasVersion,true,"version change logged")
   -- every entry carries seq, st, h
@@ -385,8 +385,12 @@ do
   eq(db.session.est,4200,"logout estimate = played + session time")
   local v=db.violations
   PainLedger.playedChecked=nil
-  fire("TIME_PLAYED_MSG",4300,100); eq(db.violations,v,"100s over estimate is within slack")
+  fire("TIME_PLAYED_MSG",4230,100); eq(db.violations,v,"30s over estimate is within slack")
   eq(db.unaccounted,0,"nothing unaccounted within slack")
+  PainLedger.playedChecked=nil; db.session={est=4200}
+  fire("TIME_PLAYED_MSG",4440,100)
+  eq(db.unaccounted,240,"four minutes without the addon are caught (slack is 60 s)")
+  db.unaccounted=0
   PainLedger.playedChecked=nil; db.session={est=4200}
   fire("TIME_PLAYED_MSG",9000,100)
   eq(db.violations,v,"missing time is not a violation")
@@ -620,17 +624,17 @@ do
   now=now+30; fire("PLAYER_REGEN_DISABLED")
   eq(db.violations,v+2,"the next fight counts again")
   PainLedger:UpdateDisplay()
-  eq(LINES["flags"]:find("1 NON%-RARE ITEM%(S%) WORN")~=nil,true,"window warns about the non-rare item")
+  eq(LINES["flags"]:find("Not from a rare: Feet")~=nil,true,"window names the slot with the non-rare item")
   equipped[8]=nil; equipped[1]=500       -- rare helm, but Head is fate-locked
   now=now+30; fire("PLAYER_REGEN_DISABLED")
   eq(db.violations,v+3,"a rare item in a locked slot also counts")
   PainLedger:UpdateDisplay()
-  eq(LINES["flags"]:find("Violations: ")~=nil and LINES["flags"]:find("LOCKED SLOT")~=nil,true,"violation count and locked-slot warning show together")
+  eq(LINES["flags"]:find("Violations: ")~=nil and LINES["flags"]:find("Locked slot worn: Head")~=nil,true,"violation count and the named locked slot show together")
   equipped[1]=nil
   now=now+30; fire("PLAYER_REGEN_DISABLED")
   eq(db.violations,v+3,"clean again once it is off")
   PainLedger:UpdateDisplay()
-  eq(LINES["flags"]:find("NON%-RARE"),nil,"warning gone")
+  eq(LINES["flags"]:find("Not from a rare"),nil,"warning gone")
   for k in pairs(equipped) do equipped[k]=nil end
   for k,v2 in pairs(keepEq) do equipped[k]=v2 end
   for k in pairs(F.slots) do F.slots[k]=nil end
@@ -719,5 +723,48 @@ do
   eq(db.book[1260]~=nil and db.book[1260].kills==2 and db.book[1260].name=="Great Father Arctikus",true,"old kill count carried over with the roster name")
   eq(db.book["name:Some Rare"]~=nil and db.book["name:Some Rare"].kills==1,true,"a name-only kill count carried over")
   eq(narg.kills,1,"existing book entries untouched by the migration")
+end
+-- ===== 0.14.3: gear tint on the character sheet, slot names =====
+do
+  local db=PainLedgerDB; local F=db.fate
+  local made={}
+  for _,n in ipairs({"CharacterHeadSlot","CharacterChestSlot","CharacterMainHandSlot","CharacterLegsSlot","CharacterFeetSlot","CharacterWristSlot"}) do
+    local b=widget()
+    rawset(b,"CreateTexture",function() local tx=widget()
+      rawset(tx,"SetColorTexture",function(s,r,g,bb,a) rawset(s,"rgba",{r,g,bb,a}) end)
+      rawset(tx,"Show",function(s) rawset(s,"shown",true) end)
+      rawset(tx,"Hide",function(s) rawset(s,"shown",false) end)
+      return tx end)
+    _G[n]=b; made[n]=b
+  end
+  local keepSlots={} for k,v in pairs(F.slots) do keepSlots[k]=v end
+  local keepEq2={} for k,v in pairs(equipped) do keepEq2[k]=v end
+  for k in pairs(equipped) do equipped[k]=nil end
+  F.slots[1]=nil; F.slots[5]=true; F.slots[16]=true
+  equipped[5]=999; equipped[16]=100          -- Chest: not from a rare; Main Hand: rare
+  PainLedger:UpdateDisplay()
+  local head,chest,mh=made.CharacterHeadSlot.painLedgerTint,made.CharacterChestSlot.painLedgerTint,made.CharacterMainHandSlot.painLedgerTint
+  eq(head.shown and head.rgba[1]>0.7 and head.rgba[2]<0.1,true,"an empty locked slot is washed red")
+  eq(head.rgba[4]<0.5,true,"lighter while nothing is worn in it")
+  eq(chest.shown and chest.rgba[2]>0.4,true,"an unlocked slot with non-rare gear is washed orange")
+  eq(mh.shown,false,"an unlocked slot with rare gear is clean")
+  equipped[1]=999
+  PainLedger:UpdateDisplay()
+  eq(head.rgba[4]>0.5,true,"darker red once something is worn in a locked slot")
+  eq(LINES["flags"]:find("Locked slot worn: Head")~=nil,true,"window names the locked slot")
+  eq(LINES["flags"]:find("Not from a rare: Chest")~=nil,true,"window names the non-rare slot")
+  F.slots[7]=nil; F.slots[8]=nil; F.slots[9]=nil
+  equipped[7]=999; equipped[8]=999; equipped[9]=999
+  PainLedger:UpdateDisplay()
+  eq(LINES["flags"]:find("4 locked slots worn")~=nil,true,"four or more collapse to a count")
+  F.slots[1]=true; equipped[1]=nil
+  PainLedger:UpdateDisplay()
+  eq(head.shown,false,"the wash lifts once Fate unlocks the slot")
+  for k in pairs(F.slots) do F.slots[k]=nil end
+  for k,v in pairs(keepSlots) do F.slots[k]=v end
+  for k in pairs(equipped) do equipped[k]=nil end
+  for k,v in pairs(keepEq2) do equipped[k]=v end
+  for n in pairs(made) do _G[n]=nil end
+  PainLedger:UpdateDisplay()
 end
 print("ALL PASSED")

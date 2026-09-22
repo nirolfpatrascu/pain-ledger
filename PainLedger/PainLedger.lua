@@ -1576,6 +1576,62 @@ local function ForbiddenWorn()
   return out
 end
 
+-------------------------------------------------------------------------------
+-- Character sheet: a red wash over every gear slot Fate has not unlocked (darker
+-- when something is worn in it), orange over an unlocked slot wearing gear that
+-- did not come from a rare. Cosmetic, like the bar tint: the real checks run on
+-- equip and on entering combat.
+-------------------------------------------------------------------------------
+local SLOT_BUTTON = {
+  [1] = "CharacterHeadSlot", [2] = "CharacterNeckSlot", [3] = "CharacterShoulderSlot",
+  [5] = "CharacterChestSlot", [6] = "CharacterWaistSlot", [7] = "CharacterLegsSlot",
+  [8] = "CharacterFeetSlot", [9] = "CharacterWristSlot", [10] = "CharacterHandsSlot",
+  [11] = "CharacterFinger0Slot", [12] = "CharacterFinger1Slot", [13] = "CharacterTrinket0Slot",
+  [14] = "CharacterTrinket1Slot", [15] = "CharacterBackSlot", [16] = "CharacterMainHandSlot",
+  [17] = "CharacterSecondaryHandSlot", [18] = "CharacterRangedSlot",
+}
+
+local function SlotState(slot)
+  if FATE_SLOTS[slot] and not db.fate.slots[slot] then return "locked" end
+  local id = GetInventoryItemID("player", slot)
+  if id and not (db.rareEver[id] or db.grandfathered[id]) then return "nonrare" end
+end
+
+local function UpdateGearTint()
+  if not db or not db.started or not db.fate then return end
+  for slot, name in pairs(SLOT_BUTTON) do
+    local btn = _G[name]
+    if type(btn) == "table" and btn.CreateTexture then
+      local ov = btn.painLedgerTint
+      if not ov then
+        ov = btn:CreateTexture(nil, "OVERLAY")
+        ov:SetAllPoints(btn)
+        btn.painLedgerTint = ov
+        if btn.HookScript then
+          btn:HookScript("OnEnter", function(self)
+            local state = SlotState(slot)
+            if not state or (GameTooltip.IsOwned and not GameTooltip:IsOwned(self)) then return end
+            GameTooltip:AddLine(state == "locked" and "Pain Ledger: Fate has not unlocked this slot"
+              or "Pain Ledger: this item did not come from a rare", 1, 0.25, 0.25, true)
+            GameTooltip:Show()
+          end)
+        end
+      end
+      local state = SlotState(slot)
+      ov.state = state
+      if state == "locked" then
+        ov:SetColorTexture(0.8, 0.05, 0.05, GetInventoryItemID("player", slot) and 0.6 or 0.35)
+        ov:Show()
+      elseif state == "nonrare" then
+        ov:SetColorTexture(1, 0.5, 0, 0.45)
+        ov:Show()
+      else
+        ov:Hide()
+      end
+    end
+  end
+end
+
 -- Entering combat in forbidden gear is its own violation, once per fight, so
 -- gear that got on you any other way (addon off, a login) still counts.
 local COMBAT_GAP = 10 -- seconds: in and out of combat this fast is the same fight
@@ -1622,7 +1678,7 @@ end
 -- every 20 minutes and (as an estimate) at logout. If the next login's /played
 -- is ahead of the logout estimate, the character was played without the addon.
 -------------------------------------------------------------------------------
-local PLAYED_SLACK = 300      -- seconds of tolerance (logout screen, latency)
+local PLAYED_SLACK = 60       -- seconds of tolerance: logout to server stop, latency
 local PLAYED_EVERY = 20 * 60
 
 -- The addon's own /played requests stay out of chat: every other frame that
@@ -2323,6 +2379,7 @@ function RL:BuildFrame()
   f.flags = Line()
   f.flags:SetWordWrap(true)
   f.bars = Line()
+  f.bars:SetWordWrap(true)
   f.head = Line()
   f.head:SetWordWrap(true)
 
@@ -2411,7 +2468,7 @@ function RL:Layout()
   if f.trainShown then Put(f.train, y); y = y + H(f.train) + 2 else f.train:ClearAllPoints(); f.train:SetPoint("TOPLEFT", 10, 40) end
   Put(f.slots, y); y = y + H(f.slots) + 3
   Put(f.flags, y); y = y + H(f.flags) + 2
-  if f.barsShown then Put(f.bars, y); y = y + 14 else f.bars:ClearAllPoints(); f.bars:SetPoint("TOPLEFT", 10, 40) end
+  if f.barsShown then Put(f.bars, y); y = y + H(f.bars) + 2 else f.bars:ClearAllPoints(); f.bars:SetPoint("TOPLEFT", 10, 40) end
   Put(f.head, y); y = y + H(f.head) + 2
 
   f.iconHost:ClearAllPoints()
@@ -2519,6 +2576,7 @@ end
 function RL:UpdateDisplay()
   local f = self.frame
   if not f or not db then return end
+  UpdateGearTint()
   if self.book and self.book:IsShown() then self:UpdateBook() end
   f.title:SetText("Pain Ledger |cff999999v" .. (RL.version or "?") .. "|r" .. (RL.burnMode and "  |cffff8000[BURN MODE]|r" or ""))
   f.legal:SetText("|cff40ff40Spendable:|r " .. Coins(db.legal))
@@ -2611,10 +2669,18 @@ function RL:UpdateDisplay()
   local v, o, u = db.violations, db.overrides or 0, db.unaccounted or 0
   local extra = (u > 0 and ("  |cffff8000Unaccounted: " .. FormatPlayed(u) .. "|r") or "")
     .. (o > 0 and ("  |cffff8000Overrides: " .. o .. "|r") or "")
-  local nonRare = 0
-  for _, b in ipairs(ForbiddenWorn()) do if not b.locked then nonRare = nonRare + 1 end end
-  if nonRare > 0 then extra = "  |cffff4040" .. nonRare .. " NON-RARE ITEM(S) WORN|r" .. extra end
-  if inUse > 0 then extra = "  |cffff4040" .. inUse .. " LOCKED SLOT(S) IN USE|r" .. extra end
+  local lockedWorn, nonRareWorn = {}, {}
+  for _, b in ipairs(ForbiddenWorn()) do
+    local t = b.locked and lockedWorn or nonRareWorn
+    t[#t + 1] = FATE_SLOTS[b.slot] or ("slot " .. b.slot)
+  end
+  local function Named(list, one, many)
+    if #list == 0 then return "" end
+    if #list <= 3 then return "  |cffff4040" .. (#list == 1 and one or many) .. ": " .. table.concat(list, ", ") .. "|r" end
+    return "  |cffff4040" .. #list .. " " .. many:lower() .. "|r"
+  end
+  extra = Named(lockedWorn, "Locked slot worn", "Locked slots worn")
+    .. Named(nonRareWorn, "Not from a rare", "Not from a rare") .. extra
   local status
   if v > 0 then status = "|cffff4040Violations: " .. v .. "|r"
   elseif u > 0 then status = "|cffffd100No violations|r"
@@ -3065,6 +3131,7 @@ RL.HeadShort = HeadShort
 RL.TrainLines = TrainLines
 RL.ForbiddenWorn = ForbiddenWorn
 RL.BookRows = BookRows
+RL.UpdateGearTint = UpdateGearTint
 RL.BookSetAll = BookSetAll
 RL.ChainVerify = ChainVerify
 RL.EntryString = EntryString

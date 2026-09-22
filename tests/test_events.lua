@@ -59,7 +59,7 @@ function time() return now end
 function GetServerTime() return now+7 end
 function GetRealmName() return "Realm" end
 function RequestTimePlayed() PLAYED_REQUESTED=(PLAYED_REQUESTED or 0)+1 end
-C_AddOns={GetAddOnMetadata=function(_,k) if k=="Version" then return "0.14.2" end end}
+C_AddOns={GetAddOnMetadata=function(_,k) if k=="Version" then return "0.14.3" end end}
 function UnitRace() return "Gnome","Gnome" end
 function UnitFactionGroup() return "Alliance","Alliance" end
 RANDOM_ROLL_RESULT="%s rolls %d (%d-%d)"

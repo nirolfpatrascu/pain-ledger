@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.3
+- Character sheet: locked gear slots are washed red (darker when something is worn in them), unlocked slots wearing non-rare gear orange, with a line in the slot's tooltip.
+- The window names the slots ("Locked slot worn: Main Hand", "Not from a rare: Chest") instead of only counting them.
+- The "On bars, locked" line wraps instead of drawing over the chain line.
+- Unaccounted time: tolerance cut from 5 minutes to 60 seconds, so short sessions without the addon are caught.
+
 ## 0.14.2
 - Logbook portrait shows the Pain Ledger icon, cut round.
 - Login gear warnings wait until item names have loaded.
