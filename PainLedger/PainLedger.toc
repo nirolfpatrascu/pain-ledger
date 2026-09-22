@@ -1,0 +1,11 @@
+## Interface: 11508, 11509
+## Title: Pain Ledger
+## Notes: Rarelocked + rare-gold-only + zone toll + fate draws for every class and race, with a hash-chained log and witness channel.
+## Author: Florin
+## IconTexture: Interface\AddOns\PainLedger\Media\icon.png
+## X-License: GPL-3.0-or-later
+## Version: 0.14.2
+## SavedVariablesPerCharacter: PainLedgerDB, RareLedgerDB
+
+Data.lua
+PainLedger.lua

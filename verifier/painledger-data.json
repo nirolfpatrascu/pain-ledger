@@ -1,0 +1,2288 @@
+{
+ "version": "8f1af3515de1",
+ "build": "1.15.9.69722",
+ "raceBit": {
+  "Human": 1,
+  "Orc": 2,
+  "Dwarf": 4,
+  "NightElf": 8,
+  "Scourge": 16,
+  "Tauren": 32,
+  "Gnome": 64,
+  "Troll": 128
+ },
+ "classes": {
+  "WARRIOR": [
+   {
+    "id": 78,
+    "name": "Heroic Strike",
+    "label": "Heroic Strike",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 6673,
+    "name": "Battle Shout",
+    "label": "Battle Shout",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 100,
+    "name": "Charge",
+    "label": "Charge",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 772,
+    "name": "Rend",
+    "label": "Rend",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 6343,
+    "name": "Thunder Clap",
+    "label": "Thunder Clap",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 1715,
+    "name": "Hamstring",
+    "label": "Hamstring",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 71,
+    "name": "Defensive Stance",
+    "label": "Defensive Stance",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 355,
+    "name": "Taunt",
+    "label": "Taunt",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 2687,
+    "name": "Bloodrage",
+    "label": "Bloodrage",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 7386,
+    "name": "Sunder Armor",
+    "label": "Sunder Armor",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 72,
+    "name": "Shield Bash",
+    "label": "Shield Bash",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 7384,
+    "name": "Overpower",
+    "label": "Overpower",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 1160,
+    "name": "Demoralizing Shout",
+    "label": "Demoralizing Shout",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 6572,
+    "name": "Revenge",
+    "label": "Revenge",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 694,
+    "name": "Mocking Blow",
+    "label": "Mocking Blow",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 2565,
+    "name": "Shield Block",
+    "label": "Shield Block",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 676,
+    "name": "Disarm",
+    "label": "Disarm",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 845,
+    "name": "Cleave",
+    "label": "Cleave",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 20230,
+    "name": "Retaliation",
+    "label": "Retaliation",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 5246,
+    "name": "Intimidating Shout",
+    "label": "Intimidating Shout",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 5308,
+    "name": "Execute",
+    "label": "Execute",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 1161,
+    "name": "Challenging Shout",
+    "label": "Challenging Shout",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 871,
+    "name": "Shield Wall",
+    "label": "Shield Wall",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 1464,
+    "name": "Slam",
+    "label": "Slam",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 2458,
+    "name": "Berserker Stance",
+    "label": "Berserker Stance",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 20252,
+    "name": "Intercept",
+    "label": "Intercept",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 18499,
+    "name": "Berserker Rage",
+    "label": "Berserker Rage",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 1680,
+    "name": "Whirlwind",
+    "label": "Whirlwind",
+    "lvl": 36,
+    "race": 0
+   },
+   {
+    "id": 6552,
+    "name": "Pummel",
+    "label": "Pummel",
+    "lvl": 38,
+    "race": 0
+   },
+   {
+    "id": 1719,
+    "name": "Recklessness",
+    "label": "Recklessness",
+    "lvl": 50,
+    "race": 0
+   }
+  ],
+  "PALADIN": [
+   {
+    "id": 465,
+    "name": "Devotion Aura",
+    "label": "Devotion Aura",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 635,
+    "name": "Holy Light",
+    "label": "Holy Light",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 20154,
+    "name": "Seal of Righteousness",
+    "label": "Seal of Righteousness",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 19740,
+    "name": "Blessing of Might",
+    "label": "Blessing of Might",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 20271,
+    "name": "Judgement",
+    "label": "Judgement",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 498,
+    "name": "Divine Protection",
+    "label": "Divine Protection",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 21082,
+    "name": "Seal of the Crusader",
+    "label": "Seal of the Crusader",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 853,
+    "name": "Hammer of Justice",
+    "label": "Hammer of Justice",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 1152,
+    "name": "Purify",
+    "label": "Purify",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 633,
+    "name": "Lay on Hands",
+    "label": "Lay on Hands",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 1022,
+    "name": "Blessing of Protection",
+    "label": "Blessing of Protection",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 7328,
+    "name": "Redemption",
+    "label": "Redemption",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 19742,
+    "name": "Blessing of Wisdom",
+    "label": "Blessing of Wisdom",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 7294,
+    "name": "Retribution Aura",
+    "label": "Retribution Aura",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 25780,
+    "name": "Righteous Fury",
+    "label": "Righteous Fury",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 1044,
+    "name": "Blessing of Freedom",
+    "label": "Blessing of Freedom",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 879,
+    "name": "Exorcism",
+    "label": "Exorcism",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 5502,
+    "name": "Sense Undead",
+    "label": "Sense Undead",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 19750,
+    "name": "Flash of Light",
+    "label": "Flash of Light",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 19746,
+    "name": "Concentration Aura",
+    "label": "Concentration Aura",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 20164,
+    "name": "Seal of Justice",
+    "label": "Seal of Justice",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 2878,
+    "name": "Turn Undead",
+    "label": "Turn Undead",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 1038,
+    "name": "Blessing of Salvation",
+    "label": "Blessing of Salvation",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 19876,
+    "name": "Shadow Resistance Aura",
+    "label": "Shadow Resistance Aura",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 19752,
+    "name": "Divine Intervention",
+    "label": "Divine Intervention",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 20165,
+    "name": "Seal of Light",
+    "label": "Seal of Light",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 19888,
+    "name": "Frost Resistance Aura",
+    "label": "Frost Resistance Aura",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 642,
+    "name": "Divine Shield",
+    "label": "Divine Shield",
+    "lvl": 34,
+    "race": 0
+   },
+   {
+    "id": 19891,
+    "name": "Fire Resistance Aura",
+    "label": "Fire Resistance Aura",
+    "lvl": 36,
+    "race": 0
+   },
+   {
+    "id": 20166,
+    "name": "Seal of Wisdom",
+    "label": "Seal of Wisdom",
+    "lvl": 38,
+    "race": 0
+   },
+   {
+    "id": 19977,
+    "name": "Blessing of Light",
+    "label": "Blessing of Light",
+    "lvl": 40,
+    "race": 0
+   },
+   {
+    "id": 4987,
+    "name": "Cleanse",
+    "label": "Cleanse",
+    "lvl": 42,
+    "race": 0
+   },
+   {
+    "id": 24275,
+    "name": "Hammer of Wrath",
+    "label": "Hammer of Wrath",
+    "lvl": 44,
+    "race": 0
+   },
+   {
+    "id": 6940,
+    "name": "Blessing of Sacrifice",
+    "label": "Blessing of Sacrifice",
+    "lvl": 46,
+    "race": 0
+   },
+   {
+    "id": 2812,
+    "name": "Holy Wrath",
+    "label": "Holy Wrath",
+    "lvl": 50,
+    "race": 0
+   }
+  ],
+  "HUNTER": [
+   {
+    "id": 1494,
+    "name": "Track Beasts",
+    "label": "Tracking",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 2973,
+    "name": "Raptor Strike",
+    "label": "Raptor Strike",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 1978,
+    "name": "Serpent Sting",
+    "label": "Serpent Sting",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 13163,
+    "name": "Aspect of the Monkey",
+    "label": "Aspect of the Monkey",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 1130,
+    "name": "Hunter's Mark",
+    "label": "Hunter's Mark",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 3044,
+    "name": "Arcane Shot",
+    "label": "Arcane Shot",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 5116,
+    "name": "Concussive Shot",
+    "label": "Concussive Shot",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 1515,
+    "name": "Tame Beast",
+    "label": "Tame Beast",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 13165,
+    "name": "Aspect of the Hawk",
+    "label": "Aspect of the Hawk",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 136,
+    "name": "Mend Pet",
+    "label": "Mend Pet",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 2974,
+    "name": "Wing Clip",
+    "label": "Wing Clip",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 20736,
+    "name": "Distracting Shot",
+    "label": "Distracting Shot",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 1002,
+    "name": "Eyes of the Beast",
+    "label": "Eyes of the Beast",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 1513,
+    "name": "Scare Beast",
+    "label": "Scare Beast",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 6197,
+    "name": "Eagle Eye",
+    "label": "Eagle Eye",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 1495,
+    "name": "Mongoose Bite",
+    "label": "Mongoose Bite",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 13795,
+    "name": "Immolation Trap",
+    "label": "Immolation Trap",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 2643,
+    "name": "Multi-Shot",
+    "label": "Multi-Shot",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 781,
+    "name": "Disengage",
+    "label": "Disengage",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 1499,
+    "name": "Freezing Trap",
+    "label": "Freezing Trap",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 5118,
+    "name": "Aspect of the Cheetah",
+    "label": "Aspect of the Cheetah",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 3043,
+    "name": "Scorpid Sting",
+    "label": "Scorpid Sting",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 1462,
+    "name": "Beast Lore",
+    "label": "Beast Lore",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 3045,
+    "name": "Rapid Fire",
+    "label": "Rapid Fire",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 13809,
+    "name": "Frost Trap",
+    "label": "Frost Trap",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 5384,
+    "name": "Feign Death",
+    "label": "Feign Death",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 13161,
+    "name": "Aspect of the Beast",
+    "label": "Aspect of the Beast",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 1543,
+    "name": "Flare",
+    "label": "Flare",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 13813,
+    "name": "Explosive Trap",
+    "label": "Explosive Trap",
+    "lvl": 34,
+    "race": 0
+   },
+   {
+    "id": 3034,
+    "name": "Viper Sting",
+    "label": "Viper Sting",
+    "lvl": 36,
+    "race": 0
+   },
+   {
+    "id": 1510,
+    "name": "Volley",
+    "label": "Volley",
+    "lvl": 40,
+    "race": 0
+   },
+   {
+    "id": 13159,
+    "name": "Aspect of the Pack",
+    "label": "Aspect of the Pack",
+    "lvl": 40,
+    "race": 0
+   },
+   {
+    "id": 20043,
+    "name": "Aspect of the Wild",
+    "label": "Aspect of the Wild",
+    "lvl": 46,
+    "race": 0
+   },
+   {
+    "id": 19801,
+    "name": "Tranquilizing Shot",
+    "label": "Tranquilizing Shot",
+    "lvl": 60,
+    "race": 0
+   }
+  ],
+  "ROGUE": [
+   {
+    "id": 1752,
+    "name": "Sinister Strike",
+    "label": "Sinister Strike",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 1784,
+    "name": "Stealth",
+    "label": "Stealth",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 2098,
+    "name": "Eviscerate",
+    "label": "Eviscerate",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 53,
+    "name": "Backstab",
+    "label": "Backstab",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 921,
+    "name": "Pick Pocket",
+    "label": "Pick Pocket",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 1776,
+    "name": "Gouge",
+    "label": "Gouge",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 5277,
+    "name": "Evasion",
+    "label": "Evasion",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 2983,
+    "name": "Sprint",
+    "label": "Sprint",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 5171,
+    "name": "Slice and Dice",
+    "label": "Slice and Dice",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 6770,
+    "name": "Sap",
+    "label": "Sap",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 1766,
+    "name": "Kick",
+    "label": "Kick",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 703,
+    "name": "Garrote",
+    "label": "Garrote",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 8647,
+    "name": "Expose Armor",
+    "label": "Expose Armor",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 1804,
+    "name": "Pick Lock",
+    "label": "Pick Lock",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 1966,
+    "name": "Feint",
+    "label": "Feint",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 8676,
+    "name": "Ambush",
+    "label": "Ambush",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 1943,
+    "name": "Rupture",
+    "label": "Rupture",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 2842,
+    "name": "Poisons",
+    "label": "Poisons",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 1725,
+    "name": "Distract",
+    "label": "Distract",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 1856,
+    "name": "Vanish",
+    "label": "Vanish",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 1833,
+    "name": "Cheap Shot",
+    "label": "Cheap Shot",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 408,
+    "name": "Kidney Shot",
+    "label": "Kidney Shot",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 1842,
+    "name": "Disarm Trap",
+    "label": "Disarm Trap",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 2094,
+    "name": "Blind",
+    "label": "Blind",
+    "lvl": 34,
+    "race": 0
+   }
+  ],
+  "PRIEST": [
+   {
+    "id": 585,
+    "name": "Smite",
+    "label": "Smite",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 1243,
+    "name": "Power Word: Fortitude",
+    "label": "Power Word: Fortitude",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 2050,
+    "name": "Lesser Heal",
+    "label": "Lesser Heal",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 589,
+    "name": "Shadow Word: Pain",
+    "label": "Shadow Word: Pain",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 17,
+    "name": "Power Word: Shield",
+    "label": "Power Word: Shield",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 139,
+    "name": "Renew",
+    "label": "Renew",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 586,
+    "name": "Fade",
+    "label": "Fade",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 2006,
+    "name": "Resurrection",
+    "label": "Resurrection",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 2652,
+    "name": "Touch of Weakness",
+    "label": "Touch of Weakness",
+    "lvl": 10,
+    "race": 16
+   },
+   {
+    "id": 8092,
+    "name": "Mind Blast",
+    "label": "Mind Blast",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 9035,
+    "name": "Hex of Weakness",
+    "label": "Hex of Weakness",
+    "lvl": 10,
+    "race": 128
+   },
+   {
+    "id": 10797,
+    "name": "Starshards",
+    "label": "Starshards",
+    "lvl": 10,
+    "race": 8
+   },
+   {
+    "id": 13908,
+    "name": "Desperate Prayer",
+    "label": "Desperate Prayer",
+    "lvl": 10,
+    "race": 5
+   },
+   {
+    "id": 588,
+    "name": "Inner Fire",
+    "label": "Inner Fire",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 528,
+    "name": "Cure Disease",
+    "label": "Cure Disease",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 8122,
+    "name": "Psychic Scream",
+    "label": "Psychic Scream",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 2054,
+    "name": "Heal",
+    "label": "Heal",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 527,
+    "name": "Dispel Magic",
+    "label": "Dispel Magic",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 453,
+    "name": "Mind Soothe",
+    "label": "Mind Soothe",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 2061,
+    "name": "Flash Heal",
+    "label": "Flash Heal",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 2651,
+    "name": "Elune's Grace",
+    "label": "Elune's Grace",
+    "lvl": 20,
+    "race": 8
+   },
+   {
+    "id": 2944,
+    "name": "Devouring Plague",
+    "label": "Devouring Plague",
+    "lvl": 20,
+    "race": 16
+   },
+   {
+    "id": 6346,
+    "name": "Fear Ward",
+    "label": "Fear Ward",
+    "lvl": 20,
+    "race": 4
+   },
+   {
+    "id": 9484,
+    "name": "Shackle Undead",
+    "label": "Shackle Undead",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 13896,
+    "name": "Feedback",
+    "label": "Feedback",
+    "lvl": 20,
+    "race": 1
+   },
+   {
+    "id": 14914,
+    "name": "Holy Fire",
+    "label": "Holy Fire",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 18137,
+    "name": "Shadowguard",
+    "label": "Shadowguard",
+    "lvl": 20,
+    "race": 128
+   },
+   {
+    "id": 2096,
+    "name": "Mind Vision",
+    "label": "Mind Vision",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 8129,
+    "name": "Mana Burn",
+    "label": "Mana Burn",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 596,
+    "name": "Prayer of Healing",
+    "label": "Prayer of Healing",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 605,
+    "name": "Mind Control",
+    "label": "Mind Control",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 976,
+    "name": "Shadow Protection",
+    "label": "Shadow Protection",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 552,
+    "name": "Abolish Disease",
+    "label": "Abolish Disease",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 1706,
+    "name": "Levitate",
+    "label": "Levitate",
+    "lvl": 34,
+    "race": 0
+   },
+   {
+    "id": 2060,
+    "name": "Greater Heal",
+    "label": "Greater Heal",
+    "lvl": 40,
+    "race": 0
+   },
+   {
+    "id": 21562,
+    "name": "Prayer of Fortitude",
+    "label": "Prayer of Fortitude",
+    "lvl": 48,
+    "race": 0
+   },
+   {
+    "id": 27683,
+    "name": "Prayer of Shadow Protection",
+    "label": "Prayer of Shadow Protection",
+    "lvl": 56,
+    "race": 0
+   },
+   {
+    "id": 27681,
+    "name": "Prayer of Spirit",
+    "label": "Prayer of Spirit",
+    "lvl": 60,
+    "race": 0
+   }
+  ],
+  "SHAMAN": [
+   {
+    "id": 331,
+    "name": "Healing Wave",
+    "label": "Healing Wave",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 403,
+    "name": "Lightning Bolt",
+    "label": "Lightning Bolt",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 8017,
+    "name": "Rockbiter Weapon",
+    "label": "Rockbiter Weapon",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 8042,
+    "name": "Earth Shock",
+    "label": "Earth Shock",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 8071,
+    "name": "Stoneskin Totem",
+    "label": "Stoneskin Totem",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 2484,
+    "name": "Earthbind Totem",
+    "label": "Earthbind Totem",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 324,
+    "name": "Lightning Shield",
+    "label": "Lightning Shield",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 5730,
+    "name": "Stoneclaw Totem",
+    "label": "Stoneclaw Totem",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 3599,
+    "name": "Searing Totem",
+    "label": "Searing Totem",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 8024,
+    "name": "Flametongue Weapon",
+    "label": "Flametongue Weapon",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 8050,
+    "name": "Flame Shock",
+    "label": "Flame Shock",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 8075,
+    "name": "Strength of Earth Totem",
+    "label": "Strength of Earth Totem",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 370,
+    "name": "Purge",
+    "label": "Purge",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 1535,
+    "name": "Fire Nova Totem",
+    "label": "Fire Nova Totem",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 2008,
+    "name": "Ancestral Spirit",
+    "label": "Ancestral Spirit",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 526,
+    "name": "Cure Poison",
+    "label": "Cure Poison",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 8143,
+    "name": "Tremor Totem",
+    "label": "Tremor Totem",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 2645,
+    "name": "Ghost Wolf",
+    "label": "Ghost Wolf",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 5394,
+    "name": "Healing Stream Totem",
+    "label": "Healing Stream Totem",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 8004,
+    "name": "Lesser Healing Wave",
+    "label": "Lesser Healing Wave",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 8033,
+    "name": "Frostbrand Weapon",
+    "label": "Frostbrand Weapon",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 8056,
+    "name": "Frost Shock",
+    "label": "Frost Shock",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 131,
+    "name": "Water Breathing",
+    "label": "Water Breathing",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 2870,
+    "name": "Cure Disease",
+    "label": "Cure Disease",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 8166,
+    "name": "Poison Cleansing Totem",
+    "label": "Poison Cleansing Totem",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 8181,
+    "name": "Frost Resistance Totem",
+    "label": "Frost Resistance Totem",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 5675,
+    "name": "Mana Spring Totem",
+    "label": "Mana Spring Totem",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 6196,
+    "name": "Far Sight",
+    "label": "Far Sight",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 8190,
+    "name": "Magma Totem",
+    "label": "Magma Totem",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 546,
+    "name": "Water Walking",
+    "label": "Water Walking",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 8184,
+    "name": "Fire Resistance Totem",
+    "label": "Fire Resistance Totem",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 8227,
+    "name": "Flametongue Totem",
+    "label": "Flametongue Totem",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 8177,
+    "name": "Grounding Totem",
+    "label": "Grounding Totem",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 8232,
+    "name": "Windfury Weapon",
+    "label": "Windfury Weapon",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 10595,
+    "name": "Nature Resistance Totem",
+    "label": "Nature Resistance Totem",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 421,
+    "name": "Chain Lightning",
+    "label": "Chain Lightning",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 8512,
+    "name": "Windfury Totem",
+    "label": "Windfury Totem",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 6495,
+    "name": "Sentry Totem",
+    "label": "Sentry Totem",
+    "lvl": 34,
+    "race": 0
+   },
+   {
+    "id": 15107,
+    "name": "Windwall Totem",
+    "label": "Windwall Totem",
+    "lvl": 36,
+    "race": 0
+   },
+   {
+    "id": 8170,
+    "name": "Disease Cleansing Totem",
+    "label": "Disease Cleansing Totem",
+    "lvl": 38,
+    "race": 0
+   },
+   {
+    "id": 1064,
+    "name": "Chain Heal",
+    "label": "Chain Heal",
+    "lvl": 40,
+    "race": 0
+   },
+   {
+    "id": 8835,
+    "name": "Grace of Air Totem",
+    "label": "Grace of Air Totem",
+    "lvl": 42,
+    "race": 0
+   },
+   {
+    "id": 25908,
+    "name": "Tranquil Air Totem",
+    "label": "Tranquil Air Totem",
+    "lvl": 50,
+    "race": 0
+   }
+  ],
+  "MAGE": [
+   {
+    "id": 133,
+    "name": "Fireball",
+    "label": "Fireball",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 168,
+    "name": "Frost Armor",
+    "label": "Frost Armor",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 1459,
+    "name": "Arcane Intellect",
+    "label": "Arcane Intellect",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 116,
+    "name": "Frostbolt",
+    "label": "Frostbolt",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 5504,
+    "name": "Conjure Water",
+    "label": "Conjure Water",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 587,
+    "name": "Conjure Food",
+    "label": "Conjure Food",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 2136,
+    "name": "Fire Blast",
+    "label": "Fire Blast",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 118,
+    "name": "Polymorph",
+    "label": "Polymorph",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 5143,
+    "name": "Arcane Missiles",
+    "label": "Arcane Missiles",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 122,
+    "name": "Frost Nova",
+    "label": "Frost Nova",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 130,
+    "name": "Slow Fall",
+    "label": "Slow Fall",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 604,
+    "name": "Dampen Magic",
+    "label": "Dampen Magic",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 1449,
+    "name": "Arcane Explosion",
+    "label": "Arcane Explosion",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 2120,
+    "name": "Flamestrike",
+    "label": "Flamestrike",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 2855,
+    "name": "Detect Magic",
+    "label": "Detect Magic",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 475,
+    "name": "Remove Lesser Curse",
+    "label": "Remove Lesser Curse",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 1008,
+    "name": "Amplify Magic",
+    "label": "Amplify Magic",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 10,
+    "name": "Blizzard",
+    "label": "Blizzard",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 543,
+    "name": "Fire Ward",
+    "label": "Fire Ward",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 1463,
+    "name": "Mana Shield",
+    "label": "Mana Shield",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 1953,
+    "name": "Blink",
+    "label": "Blink",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 12051,
+    "name": "Evocation",
+    "label": "Evocation",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 2948,
+    "name": "Scorch",
+    "label": "Scorch",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 6143,
+    "name": "Frost Ward",
+    "label": "Frost Ward",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 2139,
+    "name": "Counterspell",
+    "label": "Counterspell",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 120,
+    "name": "Cone of Cold",
+    "label": "Cone of Cold",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 759,
+    "name": "Conjure Mana Agate",
+    "label": "Conjure Mana Gem",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 7302,
+    "name": "Ice Armor",
+    "label": "Ice Armor",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 6117,
+    "name": "Mage Armor",
+    "label": "Mage Armor",
+    "lvl": 34,
+    "race": 0
+   },
+   {
+    "id": 23028,
+    "name": "Arcane Brilliance",
+    "label": "Arcane Brilliance",
+    "lvl": 56,
+    "race": 0
+   }
+  ],
+  "WARLOCK": [
+   {
+    "id": 348,
+    "name": "Immolate",
+    "label": "Immolate",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 686,
+    "name": "Shadow Bolt",
+    "label": "Shadow Bolt",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 687,
+    "name": "Demon Skin",
+    "label": "Demon Skin",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 688,
+    "name": "Summon Imp",
+    "label": "Summon Imp",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 172,
+    "name": "Corruption",
+    "label": "Corruption",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 702,
+    "name": "Curse of Weakness",
+    "label": "Curse of Weakness",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 1454,
+    "name": "Life Tap",
+    "label": "Life Tap",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 980,
+    "name": "Curse of Agony",
+    "label": "Curse of Agony",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 5782,
+    "name": "Fear",
+    "label": "Fear",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 697,
+    "name": "Summon Voidwalker",
+    "label": "Summon Voidwalker",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 1120,
+    "name": "Drain Soul",
+    "label": "Drain Soul",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 6201,
+    "name": "Create Healthstone (Minor)",
+    "label": "Create Healthstone",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 755,
+    "name": "Health Funnel",
+    "label": "Health Funnel",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 689,
+    "name": "Drain Life",
+    "label": "Drain Life",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 704,
+    "name": "Curse of Recklessness",
+    "label": "Curse of Recklessness",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 5697,
+    "name": "Unending Breath",
+    "label": "Unending Breath",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 693,
+    "name": "Create Soulstone (Minor)",
+    "label": "Create Soulstone",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 5676,
+    "name": "Searing Pain",
+    "label": "Searing Pain",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 698,
+    "name": "Ritual of Summoning",
+    "label": "Ritual of Summoning",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 706,
+    "name": "Demon Armor",
+    "label": "Demon Armor",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 712,
+    "name": "Summon Succubus",
+    "label": "Summon Succubus",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 5740,
+    "name": "Rain of Fire",
+    "label": "Rain of Fire",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 126,
+    "name": "Eye of Kilrogg",
+    "label": "Eye of Kilrogg",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 5138,
+    "name": "Drain Mana",
+    "label": "Drain Mana",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 5500,
+    "name": "Sense Demons",
+    "label": "Sense Demons",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 132,
+    "name": "Detect Lesser Invisibility",
+    "label": "Detect Invisibility",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 1714,
+    "name": "Curse of Tongues",
+    "label": "Curse of Tongues",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 710,
+    "name": "Banish",
+    "label": "Banish",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 6366,
+    "name": "Create Firestone (Lesser)",
+    "label": "Create Firestone",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 691,
+    "name": "Summon Felhunter",
+    "label": "Summon Felhunter",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 1098,
+    "name": "Subjugate Demon",
+    "label": "Subjugate Demon",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 1949,
+    "name": "Hellfire",
+    "label": "Hellfire",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 1490,
+    "name": "Curse of the Elements",
+    "label": "Curse of the Elements",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 6229,
+    "name": "Shadow Ward",
+    "label": "Shadow Ward",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 2362,
+    "name": "Create Spellstone",
+    "label": "Create Spellstone",
+    "lvl": 36,
+    "race": 0
+   },
+   {
+    "id": 1010,
+    "name": "Curse of Idiocy",
+    "label": "Curse of Idiocy",
+    "lvl": 38,
+    "race": 0
+   },
+   {
+    "id": 5484,
+    "name": "Howl of Terror",
+    "label": "Howl of Terror",
+    "lvl": 40,
+    "race": 0
+   },
+   {
+    "id": 6789,
+    "name": "Death Coil",
+    "label": "Death Coil",
+    "lvl": 42,
+    "race": 0
+   },
+   {
+    "id": 17862,
+    "name": "Curse of Shadow",
+    "label": "Curse of Shadow",
+    "lvl": 44,
+    "race": 0
+   },
+   {
+    "id": 6353,
+    "name": "Soul Fire",
+    "label": "Soul Fire",
+    "lvl": 48,
+    "race": 0
+   },
+   {
+    "id": 1122,
+    "name": "Inferno",
+    "label": "Inferno",
+    "lvl": 50,
+    "race": 0
+   },
+   {
+    "id": 603,
+    "name": "Curse of Doom",
+    "label": "Curse of Doom",
+    "lvl": 60,
+    "race": 0
+   },
+   {
+    "id": 18540,
+    "name": "Ritual of Doom",
+    "label": "Ritual of Doom",
+    "lvl": 60,
+    "race": 0
+   }
+  ],
+  "DRUID": [
+   {
+    "id": 1126,
+    "name": "Mark of the Wild",
+    "label": "Mark of the Wild",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 5176,
+    "name": "Wrath",
+    "label": "Wrath",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 5185,
+    "name": "Healing Touch",
+    "label": "Healing Touch",
+    "lvl": 1,
+    "race": 0
+   },
+   {
+    "id": 774,
+    "name": "Rejuvenation",
+    "label": "Rejuvenation",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 8921,
+    "name": "Moonfire",
+    "label": "Moonfire",
+    "lvl": 4,
+    "race": 0
+   },
+   {
+    "id": 467,
+    "name": "Thorns",
+    "label": "Thorns",
+    "lvl": 6,
+    "race": 0
+   },
+   {
+    "id": 339,
+    "name": "Entangling Roots",
+    "label": "Entangling Roots",
+    "lvl": 8,
+    "race": 0
+   },
+   {
+    "id": 99,
+    "name": "Demoralizing Roar",
+    "label": "Demoralizing Roar",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 5487,
+    "name": "Bear Form",
+    "label": "Bear Form",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 6795,
+    "name": "Growl",
+    "label": "Growl",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 6807,
+    "name": "Maul",
+    "label": "Maul",
+    "lvl": 10,
+    "race": 0
+   },
+   {
+    "id": 5229,
+    "name": "Enrage",
+    "label": "Enrage",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 8936,
+    "name": "Regrowth",
+    "label": "Regrowth",
+    "lvl": 12,
+    "race": 0
+   },
+   {
+    "id": 5211,
+    "name": "Bash",
+    "label": "Bash",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 8946,
+    "name": "Cure Poison",
+    "label": "Cure Poison",
+    "lvl": 14,
+    "race": 0
+   },
+   {
+    "id": 779,
+    "name": "Swipe",
+    "label": "Swipe",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 1066,
+    "name": "Aquatic Form",
+    "label": "Aquatic Form",
+    "lvl": 16,
+    "race": 0
+   },
+   {
+    "id": 770,
+    "name": "Faerie Fire",
+    "label": "Faerie Fire",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 2637,
+    "name": "Hibernate",
+    "label": "Hibernate",
+    "lvl": 18,
+    "race": 0
+   },
+   {
+    "id": 768,
+    "name": "Cat Form",
+    "label": "Cat Form",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 1079,
+    "name": "Rip",
+    "label": "Rip",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 1082,
+    "name": "Claw",
+    "label": "Claw",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 2912,
+    "name": "Starfire",
+    "label": "Starfire",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 5215,
+    "name": "Prowl",
+    "label": "Prowl",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 20484,
+    "name": "Rebirth",
+    "label": "Rebirth",
+    "lvl": 20,
+    "race": 0
+   },
+   {
+    "id": 2908,
+    "name": "Soothe Animal",
+    "label": "Soothe Animal",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 5221,
+    "name": "Shred",
+    "label": "Shred",
+    "lvl": 22,
+    "race": 0
+   },
+   {
+    "id": 1822,
+    "name": "Rake",
+    "label": "Rake",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 2782,
+    "name": "Remove Curse",
+    "label": "Remove Curse",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 5217,
+    "name": "Tiger's Fury",
+    "label": "Tiger's Fury",
+    "lvl": 24,
+    "race": 0
+   },
+   {
+    "id": 1850,
+    "name": "Dash",
+    "label": "Dash",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 2893,
+    "name": "Abolish Poison",
+    "label": "Abolish Poison",
+    "lvl": 26,
+    "race": 0
+   },
+   {
+    "id": 5209,
+    "name": "Challenging Roar",
+    "label": "Challenging Roar",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 8998,
+    "name": "Cower",
+    "label": "Cower",
+    "lvl": 28,
+    "race": 0
+   },
+   {
+    "id": 740,
+    "name": "Tranquility",
+    "label": "Tranquility",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 783,
+    "name": "Travel Form",
+    "label": "Travel Form",
+    "lvl": 30,
+    "race": 0
+   },
+   {
+    "id": 5225,
+    "name": "Track Humanoids",
+    "label": "Track Humanoids",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 6785,
+    "name": "Ravage",
+    "label": "Ravage",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 22568,
+    "name": "Ferocious Bite",
+    "label": "Ferocious Bite",
+    "lvl": 32,
+    "race": 0
+   },
+   {
+    "id": 9005,
+    "name": "Pounce",
+    "label": "Pounce",
+    "lvl": 36,
+    "race": 0
+   },
+   {
+    "id": 22842,
+    "name": "Frenzied Regeneration",
+    "label": "Frenzied Regeneration",
+    "lvl": 36,
+    "race": 0
+   },
+   {
+    "id": 16914,
+    "name": "Hurricane",
+    "label": "Hurricane",
+    "lvl": 40,
+    "race": 0
+   },
+   {
+    "id": 29166,
+    "name": "Innervate",
+    "label": "Innervate",
+    "lvl": 40,
+    "race": 0
+   },
+   {
+    "id": 22812,
+    "name": "Barkskin",
+    "label": "Barkskin",
+    "lvl": 44,
+    "race": 0
+   },
+   {
+    "id": 21849,
+    "name": "Gift of the Wild",
+    "label": "Gift of the Wild",
+    "lvl": 50,
+    "race": 0
+   }
+  ]
+ }
+}

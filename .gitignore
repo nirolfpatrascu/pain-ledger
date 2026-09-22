@@ -1,0 +1,15 @@
+# data sources downloaded by tools/fetch_sources.sh
+tools/*.csv
+tools/q/
+tools/wt/
+tools/questie.zip
+tools/npcdata.lua
+tools/rares.tsv
+# simulated runs and personal saved files
+sim_*.lua
+*.SavedVariables.lua
+# release zips
+*.zip
+node_modules/
+.DS_Store
+Thumbs.db
