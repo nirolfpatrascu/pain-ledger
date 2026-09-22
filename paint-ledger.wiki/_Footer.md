@@ -1,0 +1,1 @@
+Pain Ledger is free software under the GNU GPL, version 3 or later. The Pain Ledger name and logo are not covered by the GPL. World of Warcraft is a trademark of Blizzard Entertainment, Inc.; Pain Ledger is not affiliated with or endorsed by Blizzard Entertainment.
